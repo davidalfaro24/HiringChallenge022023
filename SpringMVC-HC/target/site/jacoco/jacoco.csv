@@ -1,0 +1,13 @@
+GROUP,PACKAGE,CLASS,INSTRUCTION_MISSED,INSTRUCTION_COVERED,BRANCH_MISSED,BRANCH_COVERED,LINE_MISSED,LINE_COVERED,COMPLEXITY_MISSED,COMPLEXITY_COVERED,METHOD_MISSED,METHOD_COVERED
+ExampleMVC,com.mx.accenture.springmvc.example.model,Course,47,0,0,0,19,0,13,0,13,0
+ExampleMVC,com.mx.accenture.springmvc.example.service,CourseServiceImpl,45,0,0,0,11,0,5,0,5,0
+ExampleMVC,com.mx.accenture.springmvc.example.dto,CourseDTO,63,0,0,0,26,0,13,0,13,0
+ExampleMVC,com.mx.accenture.springmvc.example,ExampleMvcApplication,8,0,0,0,3,0,2,0,2,0
+ExampleMVC,com.mx.accenture.springmvc.example.controller,CourseController,14,0,0,0,5,0,3,0,3,0
+ExampleMVC,com.mx.accenture.challenge,CodeChallenge,0,8,0,0,0,3,0,2,0,2
+ExampleMVC,com.mx.accenture.springmvc.example.security,JWTAuthorizationFilter,29,0,4,0,8,0,4,0,2,0
+ExampleMVC,com.mx.accenture.springmvc.example.security,WebSecurityConfig,100,0,0,0,32,0,7,0,7,0
+ExampleMVC,com.mx.accenture.springmvc.example.security,AuthCredentials,17,0,0,0,7,0,5,0,5,0
+ExampleMVC,com.mx.accenture.springmvc.example.security,TokenUtils,64,0,0,0,21,0,4,0,4,0
+ExampleMVC,com.mx.accenture.springmvc.example.security,WebSecurityConfig.new AuthenticationEntryPoint() {...},19,0,0,0,5,0,2,0,2,0
+ExampleMVC,com.mx.accenture.springmvc.example.security,JWTAuthenticationFilter,74,0,0,0,20,0,4,0,4,0

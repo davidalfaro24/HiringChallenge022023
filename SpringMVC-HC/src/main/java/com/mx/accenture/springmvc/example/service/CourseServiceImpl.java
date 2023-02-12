@@ -14,9 +14,9 @@ public class CourseServiceImpl implements ICourseService {
 
     @Autowired
     private CourseRepository courseRepository;
-
+    @Override
     public List<CourseDTO> listCourse() {
-        List<Course> cursos = courseRepository.find();
+        List<Course> cursos = courseRepository.findAll();
         List<CourseDTO> customersDTO=cursos.stream()
                 .map((customer)-> mapCourseToCourseDTO(customer))
                 .collect(Collectors.toList());
@@ -25,7 +25,15 @@ public class CourseServiceImpl implements ICourseService {
 
     @Override
     public void deleteCourse(int idCourse) {
+
         courseRepository.delete(idCourse);
+    }
+    @Override
+    public CourseDTO findById(int idCourse) {
+        return courseRepository.findById(idCourse);
+    }
+    public void addCourse(Course course){
+        courseRepository.save(course);
     }
 
     private CourseDTO mapCourseToCourseDTO(Course course){

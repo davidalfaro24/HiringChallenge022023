@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="es"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>TokenUtils.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">ExampleMVC</a> &gt; <a href="index.source.html" class="el_package">com.mx.accenture.springmvc.example.security</a> &gt; <span class="el_source">TokenUtils.java</span></div><h1>TokenUtils.java</h1><pre class="source lang-java linenums">package com.mx.accenture.springmvc.example.security;
+
+import io.jsonwebtoken.Claims;
+import io.jsonwebtoken.JwtException;
+import io.jsonwebtoken.Jwts;
+import io.jsonwebtoken.security.Keys;
+import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
+
+import java.util.Collections;
+import java.util.Date;
+import java.util.HashMap;
+import java.util.Map;
+
+<span class="nc" id="L14">public class TokenUtils {</span>
+
+    private static final String ACCESS_TOKEN_SECRET = &quot;secretosecretosecretosecretosecreto&quot;;
+<span class="nc" id="L17">    private static final Long ACCESS_TOKEN_LIFETIME_SECONDS =  3600L;</span>
+
+    public static String createToken(String username){
+        // Set expiration
+<span class="nc" id="L21">        long expirationTime = ACCESS_TOKEN_LIFETIME_SECONDS * 1000;</span>
+<span class="nc" id="L22">        Date expirationDate = new Date(System.currentTimeMillis() + expirationTime);</span>
+
+        // Extra data in token
+<span class="nc" id="L25">        Map&lt;String, Object&gt; extra = new HashMap&lt;&gt;();</span>
+<span class="nc" id="L26">        extra.put(&quot;username&quot;,username);</span>
+
+        // Generate and return token
+<span class="nc" id="L29">        return Jwts.builder()</span>
+<span class="nc" id="L30">                .setSubject(username)</span>
+<span class="nc" id="L31">                .setExpiration(expirationDate)</span>
+<span class="nc" id="L32">                .addClaims(extra)</span>
+<span class="nc" id="L33">                .signWith(Keys.hmacShaKeyFor(ACCESS_TOKEN_SECRET.getBytes()))</span>
+<span class="nc" id="L34">                .compact();</span>
+    }
+
+    // This method is the reverse of createToken, here we validate the token sent by the user
+    public static UsernamePasswordAuthenticationToken getAuthentication(String token){
+        try{
+<span class="nc" id="L40">            Claims claims = Jwts.parserBuilder()</span>
+<span class="nc" id="L41">                    .setSigningKey(ACCESS_TOKEN_SECRET.getBytes())</span>
+<span class="nc" id="L42">                    .build()</span>
+<span class="nc" id="L43">                    .parseClaimsJws(token)</span>
+<span class="nc" id="L44">                    .getBody();</span>
+
+<span class="nc" id="L46">            String username = claims.getSubject();</span>
+
+<span class="nc" id="L48">            return new UsernamePasswordAuthenticationToken(username, null, Collections.emptyList());</span>
+<span class="nc" id="L49">        } catch (JwtException e){</span>
+            // When invalid token is sent
+<span class="nc" id="L51">            return null;</span>
+        }
+    }
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.5.201910111838</span></div></body></html>

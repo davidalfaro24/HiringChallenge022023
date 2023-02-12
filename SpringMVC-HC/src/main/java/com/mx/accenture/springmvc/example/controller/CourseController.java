@@ -1,6 +1,7 @@
 package com.mx.accenture.springmvc.example.controller;
 
 import com.mx.accenture.springmvc.example.dto.CourseDTO;
+import com.mx.accenture.springmvc.example.service.CourseServiceImpl;
 import com.mx.accenture.springmvc.example.service.ICourseService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.ui.Model;
@@ -16,7 +17,7 @@ import java.util.List;
 public class CourseController {
 
     @Autowired
-    private CourseService courseService;
+    private CourseServiceImpl courseService;
 
     @GetMapping("/list")
     public List<CourseDTO> listCourse(Model model){
@@ -25,7 +26,8 @@ public class CourseController {
     }
 
     @GetMapping("/delete/{id}")
-    public void deleteCourse(@PathVariable String id){
+    public void deleteCourse(@PathVariable("id") int id){
+
         courseService.deleteCourse(id);
     }
 }

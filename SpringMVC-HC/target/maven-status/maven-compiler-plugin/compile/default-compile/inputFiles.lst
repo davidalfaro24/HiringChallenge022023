@@ -1,0 +1,13 @@
+C:\Users\david\OneDrive\Documentos\GitHub\HiringChallenge022023\SpringMVC-HC\src\main\java\com\mx\accenture\springmvc\example\security\JWTAuthenticationFilter.java
+C:\Users\david\OneDrive\Documentos\GitHub\HiringChallenge022023\SpringMVC-HC\src\main\java\com\mx\accenture\springmvc\example\ExampleMvcApplication.java
+C:\Users\david\OneDrive\Documentos\GitHub\HiringChallenge022023\SpringMVC-HC\src\main\java\com\mx\accenture\springmvc\example\security\JWTAuthorizationFilter.java
+C:\Users\david\OneDrive\Documentos\GitHub\HiringChallenge022023\SpringMVC-HC\src\main\java\com\mx\accenture\springmvc\example\service\ICourseService.java
+C:\Users\david\OneDrive\Documentos\GitHub\HiringChallenge022023\SpringMVC-HC\src\main\java\com\mx\accenture\springmvc\example\service\CourseServiceImpl.java
+C:\Users\david\OneDrive\Documentos\GitHub\HiringChallenge022023\SpringMVC-HC\src\main\java\com\mx\accenture\springmvc\example\model\Course.java
+C:\Users\david\OneDrive\Documentos\GitHub\HiringChallenge022023\SpringMVC-HC\src\main\java\com\mx\accenture\springmvc\example\controller\CourseController.java
+C:\Users\david\OneDrive\Documentos\GitHub\HiringChallenge022023\SpringMVC-HC\src\main\java\com\mx\accenture\springmvc\example\security\WebSecurityConfig.java
+C:\Users\david\OneDrive\Documentos\GitHub\HiringChallenge022023\SpringMVC-HC\src\main\java\com\mx\accenture\springmvc\example\dao\CourseRepository.java
+C:\Users\david\OneDrive\Documentos\GitHub\HiringChallenge022023\SpringMVC-HC\src\main\java\com\mx\accenture\challenge\CodeChallenge.java
+C:\Users\david\OneDrive\Documentos\GitHub\HiringChallenge022023\SpringMVC-HC\src\main\java\com\mx\accenture\springmvc\example\dto\CourseDTO.java
+C:\Users\david\OneDrive\Documentos\GitHub\HiringChallenge022023\SpringMVC-HC\src\main\java\com\mx\accenture\springmvc\example\security\TokenUtils.java
+C:\Users\david\OneDrive\Documentos\GitHub\HiringChallenge022023\SpringMVC-HC\src\main\java\com\mx\accenture\springmvc\example\security\AuthCredentials.java

@@ -1,0 +1,14 @@
+com\mx\accenture\springmvc\example\security\JWTAuthorizationFilter.class
+com\mx\accenture\challenge\CodeChallenge.class
+com\mx\accenture\springmvc\example\security\TokenUtils.class
+com\mx\accenture\springmvc\example\security\WebSecurityConfig$1.class
+com\mx\accenture\springmvc\example\ExampleMvcApplication.class
+com\mx\accenture\springmvc\example\model\Course.class
+com\mx\accenture\springmvc\example\dto\CourseDTO.class
+com\mx\accenture\springmvc\example\security\WebSecurityConfig.class
+com\mx\accenture\springmvc\example\service\ICourseService.class
+com\mx\accenture\springmvc\example\security\AuthCredentials.class
+com\mx\accenture\springmvc\example\security\JWTAuthenticationFilter.class
+com\mx\accenture\springmvc\example\dao\CourseRepository.class
+com\mx\accenture\springmvc\example\controller\CourseController.class
+com\mx\accenture\springmvc\example\service\CourseServiceImpl.class
